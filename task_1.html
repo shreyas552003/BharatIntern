@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <a href="#" class="logo">Shreyas</a>
+            <div class="link">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#connect">Connect</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="left-sidebar"></div>
+        <div class="row">
+            <div class="left-col">
+                <img src="shre.jpg" alt="image">
+            </div>
+            <div class="right-col">
+                <h1>I'm Shreyas A R.</h1>
+                <p>I am student of MS Ramaiah institute of technology.<br>
+                    I am currently completed the fourth sem.</p>
+                <div class="media">
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-twitter"></i>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-youtube"></i>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/shreyas552003"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="icon">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/shreyas-a-r-771060290/"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- -------About me-------- -->
+<div id="about">
+    <div class="con">
+        <div class="row-con">
+            <div class="about-col-1">
+                <img src="port.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p>I was born in Chikmagaluru, a city in the state of Karnataka, India, on october 5th, 2003.
+                    I have always been interested in learning and acquiring knowledge since my early age.
+                    I have a curious and inquisitive mind that drives me to explore various topics and subjects.<br>
+                    I am also a hard-working and dedicated student who strives to excel in my academic performance and achieve my goals</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web development</span><br>Frontend web development</li>
+                        <li><span>Python</span><br>For data science</li>
+                        <li><span>signals</span><br>Signal processing</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <p>NO PRIOR EXPERIENCE (Open for internship/part time work preferably in the field of ELECTRONICS and SOFTWARE)</p>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019</span><br>Poornaprajna high school</li>
+                        <li><span>2021</span><br>Nagarjuna P.U. college</li>
+                        <li><span>2022</span><br>MS Ramaiah institute of technology</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -------connect-------- -->
+<div id="connect">
+    <div class="container">
+        <div class="row">
+            <div class="connect-left">
+                <h1 class="sub-title">Connect Me</h1>
+                <p><i class="fas fa-paper-plane"></i>shreyasar@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>8618284308</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://github.com/shreyas552003"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/shreyas-a-r-771060290/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="#" class="btn btn2">Download CV</a>
+            </div>
+            <div class="connect-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
